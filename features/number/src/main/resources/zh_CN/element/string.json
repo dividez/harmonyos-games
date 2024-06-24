@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "n_points",
+      "value": "积分"
+    },
+    {
+      "name": "n_title",
+      "value": "2048"
+    },
+    {
+      "name": "n_new_game",
+      "value": "新游戏"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "n_points",
+      "value": "POINTS"
+    },
+    {
+      "name": "n_title",
+      "value": "2048"
+    },
+    {
+      "name": "n_new_game",
+      "value": "New Game"
+    },
+    {
+      "name": "n_best",
+      "value": "Best"
+    }
+  ]
+}
