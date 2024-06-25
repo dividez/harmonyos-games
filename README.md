@@ -6,7 +6,7 @@
 ## Install
 
 1. 请[安装最新版DevEco Studio](https://developer.huawei.com/consumer/cn/download/)。
-1. `git clone https://github.com/dividez/harmonyos-games.git`
+1. `git clone https://gitee.com/dividi_z/harmonyos-games.git`
 1. Open this Project
 
 ## Feature
@@ -29,7 +29,7 @@
 
 ## Authors
 
-- [@Jim](https://github.com/dividez)
+- [@Jim](https://gitee.com/dividi_z)
 
 
 ## License
