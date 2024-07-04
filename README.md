@@ -1,8 +1,8 @@
-# HarmonyOS
+# HarmonyOS 游戏开发
 
 ## About
 基于[华为鸿蒙](https://developer.huawei.com/consumer/cn/sdk) HarmonyOS SDK ，ArkTS 开发的小游戏，学习鸿蒙开发。
-
+鸿蒙Next应用 、 鸿蒙4.0开发 
 ## Install
 
 1. 请[安装最新版DevEco Studio](https://developer.huawei.com/consumer/cn/download/)。

@@ -1,12 +1,13 @@
 import { HdNav } from '@mygames/basic'
 import { Board, Tile } from '../services/helper'
 import { HashMap } from '@kit.ArkTS'; // 导入HashMap模块
+import PreferencesUtil from '../services/PreferencesUtil';
 
 interface InfoBuilderParams {
   info: string | Resource
   text: string
 }
-
+const PREFERENCES_KEY = 'number_best_score';
 @Component
 export struct NumberGameComp {
   @State won: boolean = false;
@@ -21,7 +22,7 @@ export struct NumberGameComp {
   @State lastScreenX: number = 0
   @State lastScreenY: number = 0
   @State imageHashMap: HashMap<string, Resource> = new HashMap();
-
+  private preferencesUtil = new PreferencesUtil();
   build() {
     Column({ space: 16 }) {
       HdNav({ title: '2048', showRightIcon: false })
@@ -79,11 +80,18 @@ export struct NumberGameComp {
     .borderRadius(7)
   }
 
-  aboutToAppear() {
+  async aboutToAppear() {
     console.log("aboutToAppear")
     this.initImageHashMap()
     this.boardCellsArray = this.board.cells;
     console.log(JSON.stringify(this.boardCellsArray))
+    // 初始化首选项
+    await this.preferencesUtil.getPreferencesFromStorage();
+
+    // 获取最佳得分
+    this.preferencesUtil.getPreference(PREFERENCES_KEY).then(resultData => {
+      console.log('PREFERENCES_KEY', resultData)
+    });
   }
 
   reset() {
