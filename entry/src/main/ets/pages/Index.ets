@@ -32,6 +32,7 @@ struct Index {
   private services: GameItem[] =
     [
       new GameItem("2048", $r('app.media.2048_2'), "pages/NumberGame"),
+      new GameItem("变色方块", $r('app.media.background'), "pages/ColorBlocks"),
       new GameItem("推箱子", $r('app.media.background'), "")
     ]
 

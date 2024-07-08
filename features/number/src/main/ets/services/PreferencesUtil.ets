@@ -1,9 +1,11 @@
 // 导入preferences模块。
 import dataPreferences from '@ohos.data.preferences';
 import { BusinessError } from '@kit.BasicServicesKit';
+import common from '@ohos.app.ability.common';
 
 let context = getContext(this);
 const PREFERENCES_NAME = 'fruit.db';
+let content2 = getContext() as common.UIAbilityContext
 
 export default class PreferencesUtil {
   private preferences: dataPreferences.Preferences | undefined = undefined;
@@ -12,7 +14,8 @@ export default class PreferencesUtil {
   // 将数据加载到Preferences实例，用于数据操作
   async getPreferencesFromStorage() {
     console.log('context', context);
-    await dataPreferences.getPreferences(context, PREFERENCES_NAME).then((data) => {
+    console.log('content2', content2);
+    await dataPreferences.getPreferences(content2, PREFERENCES_NAME).then((data) => {
       this.preferences = data;
       console.info(`Succeeded in getting preferences`);
     }).catch((err: BusinessError) => {
