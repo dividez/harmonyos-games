@@ -7,7 +7,12 @@ export struct boxView {
   build() {
     Row() {
 
-    }.height(80).width(80).backgroundColor(this.b.turned ? Color.Orange : Color.Blue)
-    .margin(20)
+    }.height("80%").width("90%").backgroundColor(this.b.turned ? Color.Orange : Color.Blue)
+    .margin({
+      top: 5,
+      right: 0,
+      bottom: 0,
+      left: 0
+    })
   }
 }
